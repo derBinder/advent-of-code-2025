@@ -1,7 +1,7 @@
-file = open('./input.in').read()
+file = open('../input.in').read()
 rows = file.split('\n')
 
-def part1():
+if __name__ == '__main__':
     zero_count = 0
     position = 50
 
@@ -18,7 +18,4 @@ def part1():
             if position == 0:
                 zero_count += 1
 
-    return zero_count
-
-if __name__ == '__main__':
-    print('Part 1:', part1())
+    print(zero_count)
