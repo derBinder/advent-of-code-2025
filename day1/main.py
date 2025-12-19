@@ -9,13 +9,14 @@ def part1():
         direction = row[0]
         steps = int(row[1:])
 
-        if direction == 'L':
-            position = (position - steps) % 100
-        else:
-            position = (position + steps) % 100
-
-        if position == 0:
-            zero_count += 1
+        for _ in range(steps):
+            if direction == 'L':
+                position = (position - 1) % 100
+            else:
+                position = (position + 1) % 100
+            
+            if position == 0:
+                zero_count += 1
 
     return zero_count
 
